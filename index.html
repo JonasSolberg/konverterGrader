@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OPG 2 </title>
+
+    <script type="application/javascript">
+
+
+        function kalkuler() {
+            if (isNaN(document.getElementById("fahrenheit").value)){
+                document.getElementById("fahrenheitUt").innerHTML = "ikke et tall (fahrenheit";}
+            else {
+                let innF = document.getElementById("fahrenheit").value
+                let utC = (5 / 9) * (innF - 32);
+                document.getElementById("fahrenheitUt").innerHTML = innF + " grader fahrenheit er " + utC.toFixed(2) + " grader celcius"
+            }
+
+            if (isNaN(document.getElementById("celsius").value)) {
+                document.getElementById("celciusUt").innerHTML = "ikke et tall(celsius)";
+            }
+            else {
+                let innC = document.getElementById("celsius").value
+                let utF = (9 / 5) * (innC - 32)
+                document.getElementById("celciusUt").innerHTML = innC + " grader celcius er " + utF.toFixed(2) + " grader fahrenheit";
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+Fahrenheit: <input type="text" id="fahrenheit">
+Celsius: <input type="text" id="celsius">
+
+<button onclick="kalkuler()">Kalkuler</button>
+
+<div id="celciusUt">Celcius</div>
+<div id="fahrenheitUt">Fahrenheit</div>
+
+
+
+
+</body>
+</html>
